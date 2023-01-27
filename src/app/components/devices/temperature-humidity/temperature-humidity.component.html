@@ -1,0 +1,26 @@
+<div class="component-container">
+  <h2>Températures et Humidité</h2>
+  <div class="data-container">
+    <div class="data" [ngClass]="temperature > 30 ? 'hot' : temperature < 15 ? 'cold': 'warm'">
+      <div class="termometer-container">
+        <div class="temperature-text">{{ temperature }}°C</div>
+        <div id="wrapper">
+          <div id="termometer">
+            <div id="temperature" style="height:0" data-value="0°C"></div>
+            <div id="graduations"></div>
+          </div>
+        </div>
+      </div>
+      <div>Température</div>
+      <div class="state-info">{{ temperatureState }}</div>
+    </div>
+    <div class="data" [ngClass]="houseService.humidity < 20 ? 'aridity': 'humidity'">
+      <div class="termometer-container">
+        <div class="temperature-text">{{ houseService.humidity }}%</div>
+        <img class="humidity-img" src="../../../../assets/icon/humidity.png" alt="">
+      </div>
+      <div>Humidité</div>
+      <div class="state-info">{{ humidityState }}</div>
+    </div>
+  </div>
+</div>

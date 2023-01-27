@@ -1,0 +1,23 @@
+.light-container{
+    position: relative;
+    background-color: var(--white);
+    max-width: 500px;
+    border: 1px solid var(--grey);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.lamp-img{
+    max-height: 50%;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.brightness-value{
+    font-size: 300%;
+}

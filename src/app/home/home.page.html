@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="header-container">
+    <h2>Hi {{ authService.user }}</h2>
+    <p>Welcome to your smart home</p>
   </div>
+
+  <div class="item-container">
+    <div class="item">
+      <div class="btn-item btn-temprature-humidity" [ngClass]="{'active': btnTemperatureHumidity}" (click)="toggleBtn('btnTemperatureHumidity')"></div>
+      <div class="item-text">Température et humidité</div>
+    </div>
+    <div class="item">
+      <div class="btn-item btn-door-window" [ngClass]="{'active': btnDoorWindow}" (click)="toggleBtn('btnDoorWindow')"></div>
+      <div class="item-text">Portes et fenêtres</div>
+    </div>
+    <div class="item">
+      <div class="btn-item btn-light" [ngClass]="{'active': btnLight}" (click)="toggleBtn('btnLight')"></div>
+      <div class="item-text">Lumières</div>
+    </div>
+    <div class="item">
+      <div class="btn-item btn-air-conditioning" [ngClass]="{'active': btnAirConditioning}" (click)="toggleBtn('btnAirConditioning')"></div>
+      <div class="item-text">Air conditionné</div>
+    </div>
+    <div class="item">
+      <div class="btn-item btn-air-conditioning" [ngClass]="{'active': btnAirConditioning}" (click)="toggleBtn('btnAirConditioning')"></div>
+      <div class="item-text">Air conditionné</div>
+    </div>
+  </div>
+  <app-temperature-humidity *ngIf="componentState == 'btnTemperatureHumidity'"></app-temperature-humidity>
+  <app-doors-windows *ngIf="componentState == 'btnDoorWindow'"></app-doors-windows>
+  <app-lights *ngIf="componentState == 'btnLight'"></app-lights>
+  <app-air-conditioning *ngIf="componentState == 'btnAirConditioning'"></app-air-conditioning>
 </ion-content>
+
+<app-footer></app-footer>

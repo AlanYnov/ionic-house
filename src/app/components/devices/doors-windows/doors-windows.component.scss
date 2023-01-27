@@ -1,0 +1,41 @@
+.device-container {
+    display: flex;
+}
+
+.device {
+    background-color: var(--white);
+    width: 50%;
+    max-width: 300px;
+    border: 1px solid var(--grey);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.device-img {
+    max-width: 60%;
+    height: 120px;
+    position: relative;
+}
+
+.window-info, .door-info{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.window-info > div, .door-info > div {
+    text-align: center;
+}
+
+.open{
+    background-color: var(--light-grey);
+}
+
+.state{
+    color: var(--grey);
+}

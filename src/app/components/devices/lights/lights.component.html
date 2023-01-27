@@ -1,0 +1,16 @@
+<div class="component-container">
+  <h2>Lumières</h2>
+  <div class="light-container">
+    <img class="lamp-img" src="../../../../assets/img/lamp.png" alt="">
+    <h2>Lumière extérieure</h2>
+    <ion-toggle [checked]="houseService.outdoorLight" (ionChange)="switchOutdoorLight($event)" slot="start" color="dark"></ion-toggle>
+    <div>
+      <div class="brightness-value" *ngIf="houseService.outdoorLight">{{ houseService.brightness }}%</div>
+      <div class="brightness-value" *ngIf="!houseService.outdoorLight">Off</div>
+      <ion-range  color="dark" [value]="houseService.brightness">
+        <ion-icon slot="start" size="small" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+    </div>
+  </div>
+</div>

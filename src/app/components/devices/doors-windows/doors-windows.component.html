@@ -1,0 +1,22 @@
+<div class="component-container">
+  <h2>Portes et Fenêtres</h2>
+  <div class="device-container">
+    <div class="device" [ngClass]="houseService.door ? 'open': ''" (click)="switchDoor()">
+      <img *ngIf="houseService.door" class="device-img" src="../../assets/img/opened-door.png" alt="">
+      <img *ngIf="!houseService.door" class="device-img" src="../../assets/img/closed-door.png" alt="">
+      <div class="door-info">
+        <div>Porte d'entrée</div>
+        <div class="state">{{ houseService.doorState}}</div>
+      </div>
+    </div>
+    <div class="device" [ngClass]="houseService.window ? 'open': ''" (click)="switchWindow()">
+      <img *ngIf="houseService.window" class="device-img" src="../../assets/img/opened-window.png" alt="">
+      <img *ngIf="!houseService.window" class="device-img" src="../../assets/img/closed-window.png" alt="">
+      <div class="window-info">
+        <div>Fenêtre</div>
+        <div class="state">{{ houseService.windowState}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+

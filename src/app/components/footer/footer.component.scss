@@ -1,0 +1,17 @@
+.footer-menu{
+    position: absolute;
+    padding: 5px 10px;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 330px;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background: var(--dark);
+    color: var(--white);
+    z-index: 888;
+  }

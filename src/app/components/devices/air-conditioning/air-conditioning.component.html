@@ -1,0 +1,11 @@
+<div class="component-container">
+  <h2>Air conditionné</h2>
+  <div class="fan-container">
+    <img class="fan" *ngIf="!this.houseService.fan" src="../../../../assets/icon/ventilateur.png" alt="">
+    <img class="fan fan-low" *ngIf="this.houseService.fan && this.houseService.speed == 1" src="../../../../assets/icon/ventilateur.png" alt="">
+    <img class="fan fan-medium" *ngIf="this.houseService.fan && this.houseService.speed == 2" src="../../../../assets/icon/ventilateur.png" alt="">
+    <img class="fan fan-hard" *ngIf="this.houseService.fan && this.houseService.speed == 3" src="../../../../assets/icon/ventilateur.png" alt="">
+  </div>
+  <ion-range min="0" max="3" [ticks]="true" [snaps]="true" [(ngModel)]="houseService.speed" (ionChange)="onIonChange($event);" color="dark"></ion-range>
+      <ion-label>Puissance de la ventilation : <span class="mode-text">{{ houseService.mode }}</span></ion-label>
+</div>

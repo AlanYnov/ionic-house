@@ -1,0 +1,34 @@
+.fan-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode-text{
+    font-size: 150%;
+}
+
+.fan{
+    width: 120px;
+    height: 120px;
+  }
+  
+  .fan-low{
+    animation: fan 1.4s linear infinite;
+  }
+  
+  .fan-medium{
+    animation: fan 1s linear infinite;
+  }
+  
+  .fan-hard{
+    animation: fan .6s linear infinite;
+  }
+  
+  @keyframes fan {
+    from {
+      transform: rotate(0deg);
+    } to {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,27 +1,43 @@
-#container {
+.header-container{
+  padding: 0 16px;
+}
+
+.item-container{
+  display: flex;
+  overflow-x: auto;
+  padding: 0 16px;
+}
+
+.item{
+  max-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.item .item-text {
+  font-size: 70%;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.btn-item {
+  background-color: var(--white);
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--grey);
+  border-radius: 15px;
+  margin: 5px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.btn-temprature-humidity{ background: center / 50% url('../../assets/icon/d-item/temperature.png') no-repeat;}
+.btn-temprature-humidity.active{background: center / 50% url('../../assets/icon/w-item/temperature.png') no-repeat, var(--dark);}
 
-  color: #8c8c8c;
+.btn-door-window{ background: center / 50% url('../../assets/icon/d-item/window.png') no-repeat;}
+.btn-door-window.active{background: center / 50% url('../../assets/icon/w-item/window.png') no-repeat, var(--dark);}
 
-  margin: 0;
-}
+.btn-light{ background: center / 50% url('../../assets/icon/d-item/idea.png') no-repeat;}
+.btn-light.active{background: center / 50% url('../../assets/icon/w-item/idea.png') no-repeat, var(--dark);}
 
-#container a {
-  text-decoration: none;
-}
+.btn-air-conditioning{ background: center / 50% url('../../assets/icon/d-item/air-conditioner.png') no-repeat;}
+.btn-air-conditioning.active{background: center / 50% url('../../assets/icon/w-item/air-conditioner.png') no-repeat, var(--dark);}
